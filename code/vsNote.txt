@@ -1,0 +1,16 @@
+
+
+編譯 Ctrl+Shift+B
+編譯 Terminal > Run Build Task
+
+
+輸入 ./<檔名>.exe+Enter執行程式
+
+
+c_cpp_properties.json
+目的：設定 Compiler 路徑以及 IntelliSense
+輸入：C/C++: Edit Configurations (UI)
+
+tasks.json
+目的：Build 相關設定。
+輸入並選擇：Tasks: Configure Default Build Task
