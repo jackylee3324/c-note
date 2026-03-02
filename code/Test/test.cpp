@@ -1,20 +1,25 @@
+#include <stdio.h>
+#include <iostream>
+int main()
+{
+    std::cout << "start..." << std::endl;
+    int counts = 10;
+    int result[counts] = {8, 9, 0, 7, 6, 1, 2, 3, 4, 5};
 
-#include <iostream> 
-#include <string> 
-using namespace std; 
+    //泡泡 
+    for (int i = 0; i < counts-1; i++)
+    {
+        for (int j = 1; j < counts - i; j++)
+        {
+            if (result[j - 1] < result[j])
+            {
+                std::swap(result[j - 1], result[j]);
+            }
+        }
+    }
 
-int main() { 
-    string str1; 
-    string str2 = "caterpillar"; 
-    string str3(str2); 
-
-    cout << "str1= " << str1.empty() << endl;
-    cout << "str1.size()= " << str1.size() << endl;
-    cout << "str2= " << str2.size() << endl;
-    cout << "str3.length()= " << str3.length() << endl;
-
-    cout << "str1 = str2 " << (str1 == str2) << endl;
-    cout << "str2 = str3 " << (str3 == str3) << endl;
-
-    return 0; 
+    for (int i = 0; i < counts; i++)
+    {
+        std::cout << i << " :" << result[i] << std::endl;
+    }
 }
