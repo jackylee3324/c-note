@@ -1,6 +1,41 @@
 # 排序
 
 
+## code
+```c++
+#include <iostream>
+#include <map>
+#include <string>
+
+using namespace std;
+
+int main() {
+    // 宣告：map<Key型別, Value型別>
+    map<string, int> scores;
+
+    // 1. 插入資料 (三種方式)
+    scores["Alice"] = 90;                     // 最直覺：下標運算子
+    scores.insert(pair<string, int>("Bob", 85)); 
+    scores.emplace("Charlie", 95);            // C++11 推薦：效率較高
+
+    // 2. 搜尋資料
+    string name = "Alice";
+    if (scores.count(name)) { // 檢查 Key 是否存在 (回傳 1 或 0)
+        cout << name << "'s score: " << scores[name] << endl;
+    }
+
+    // 3. 遍歷 map (會依 Key 排序輸出)
+    cout << "\n--- All Scores ---" << endl;
+    for (auto const& [key, val] : scores) { // C++17 結構化綁定
+        cout << key << ": " << val << endl;
+    }
+
+    // 4. 刪除
+    scores.erase("Bob");
+
+    return 0;
+}
+```
 
 * ## 宣告
 
