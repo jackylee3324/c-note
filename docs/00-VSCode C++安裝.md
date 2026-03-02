@@ -15,24 +15,24 @@ VSCode Version: 1.48.2 (user setup)
 </div>
 -->
 <div align="left">
-<img src=./picture/001.png/ width=50%>
+<img src=./image/00/001.png/ width=50%>
 </div>
 
 ## 安裝 mingw-w64 編譯器
 
 Google搜尋mingw-w64
 <div align="left">
-<img src=./picture/002.png/ width=50%>
+<img src=./image/002.png/ width=50%>
 </div>
 
 點選Files頁面
 <div align="left">
-<img src=./picture/003.png/ width=50%>
+<img src=./image/00/003.png/ width=50%>
 </div>
 
 下載x86_64-win32-seh
 <div align="left">
-<img src=./picture/004.png/ width=50%>
+<img src=./image/00/004.png/ width=50%>
 </div>
 
 下載下來後可以透過 7 Zip 進行解壓縮，會得到一個名字是 mingw64 的資料夾。
@@ -52,7 +52,7 @@ code .
 * 新增檔案 helloworld.cpp
 
 <div align="left">
-<img src=./picture/005.png/ width=50%>
+<img src=./image/00/005.png/ width=50%>
 </div>
 
 * 在 helloworld.cpp 輸入代碼
@@ -67,14 +67,14 @@ std::cout << "Hello World" << std::endl;
 Terminal>Run Build Task…
 
 <div align="left">
-<img src=./picture/006.png/ width=50%>
+<img src=./image/00/006.png/ width=50%>
 </div>
 
 顯示一個帶有各種編譯器任務選項的下拉列表。  
 選擇 C/C++: g++.exe build active file
 
 <div align="left">
-<img src=./picture/007.png/ width=50%>
+<img src=./image/00/007.png/ width=50%>
 </div>
 
 * Run
@@ -82,7 +82,7 @@ Terminal>Run Build Task…
 輸入 .\helloworld
 
 <div align="left">
-<img src=./picture/008.png/ width=50%>
+<img src=./image/00/008.png/ width=50%>
 </div>
 
 ## VS Code 環境設定
