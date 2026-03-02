@@ -87,15 +87,15 @@ Terminal>Run Build Task…
 
 ## VS Code 環境設定
 
-* 設定 c_cpp_properties.json  
+#### 設定 c_cpp_properties.json  
 * 在打開 “HelloWorld.cpp” 的狀態下按 F1，於命令列輸入：C/C++: Edit Configurations (UI) 
-*打開設定頁面。
+* 打開設定頁面。
 * 編譯器路徑 選擇：../g++.exe 的選項
 * IntelliSense 模式 選擇：gcc-x64 的選項
-* 設定 tasks.json 
+#### 設定 tasks.json 
 * 在打開 “HelloWorld.cpp” 的狀態下按 F1，於命令列輸入：Tasks: Configure Default Build 
 Task，然後選擇：C/C++ g++.exe 建置使用中檔案，即可完成設定。
-* 設定 launch.json 
+#### 設定 launch.json 
 * 最後在打開 “HelloWorld.cpp” 的狀態下按 F5，選擇：g++.exe 建置及偵錯使用中的檔案。
 * 即可完成所有設定並開始
 
