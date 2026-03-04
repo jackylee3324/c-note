@@ -153,3 +153,31 @@ AVL樹的加入與平衡
 </div>
 
 ---
+
+## Red Black Tree 紅黑樹
+
+紅黑樹的5大特徵/規則：
+
+1. RBT的每個node非黑即紅
+2. Root一定是黑色
+3. 每個leaf node(也就是NIL)，一定是黑色
+4. 如果某個node是紅色，那他的child必定是黑色。不可以有兩個紅色node相連
+5. 在任何一個node上，所有從該node走到任意descendant leaf的路徑上之黑色node數必定相同
+
+時間複雜度
+| 動作名稱 | Average  | Worst case |
+| -------- | -------- | --------- |
+| 查詢     | O(log N) | O(log N)   |
+| 新增     | O(log N) | O(log N)   |
+| 刪除     | O(log N) | O(log N)   |
+
+## Splay Tree 伸展樹
+
+最近一次搜尋或新增的內容，會被移至樹的 root
+
+時間複雜度
+| 動作名稱 | Average  | Worst case |
+| -------- | -------- | --------- |
+| 查詢     | O(log N) | O(log N)   |
+| 新增     | O(log N) | O(log N)   |
+| 刪除     | O(log N) | O(log N)   |
