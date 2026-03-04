@@ -22,6 +22,8 @@
 * 每一個 node 最多只能有兩個子節點
 * 子節點有左右之分 (left node, right node)
 
+---
+
 ## Binary Search Tree (二元搜尋樹)
 如果我們再把訂定更多條件，他會成為一個方便搜索的 Binary Search Tree 二元搜尋樹也可以稱為有序二元樹。
 
@@ -31,20 +33,30 @@
 * 任意節點的左、右子樹也分別為二元搜尋樹
 * 不會出現有重複值的節點
 
+複雜度分析
+<div align="left">
+<img src=./image/36/4.png/ width=50%>
+</div>
+
 ---
 
 ## Full Binary Tree (滿二元樹)
-* 每一層節點數都是最大節點數量
+* 每個非葉節點恰好有兩個子節點
 
 ## Complete Binary Tree (完整二元樹)
 * 各層節點全滿，除了最後一層，最後一層節點全部靠左。，
 
-## Perfect Binary Tree
+## Perfect Binary Tree (完美二元樹)
 * 符合 Full Binary Tree 與 Complete Binary Tree，也就是所有各層的節點都必須是滿的。
 
 <div align="left">
-<img src=./image/36/1.png/ width=80%>
+<img src=./image/36/1.png/ width=50%>
 </div>
+
+
+## Balanced Binary Tree (平衡二元樹)
+
+* 任一節點的兩個子樹高度差不超過 1。如：AVL 樹（Adelson‑Velsky and Landis Tree）、紅黑樹（Red‑Black Tree）
 
 ---
 
@@ -70,5 +82,23 @@
 即是breadth-first search。
 
 <div align="left">
-<img src=./image/36/2.png/ width=80%>
+<img src=./image/36/2.png/ width=50%>
+</div>
+
+---
+
+## binary tree reconstruction
+
+二元樹能得到前序、中序、後序、層序。現在反過來，前序、中序、後序、層序能得到二元樹嗎？
+
+只有一種序，無法重建二元樹
+
+## 四則運算式子，表示成二元樹，然後列出前序、中序、後序。
+
+* 前序就是波蘭表示法，又稱作 prefix 。
+* 中序就是原來的四則運算式子、需要括號，又稱作 infix 。
+* 後序就是逆波蘭表示法，又稱作 postfix 。
+
+<div align="left">
+<img src=./image/36/3.png/ width=50%>
 </div>
