@@ -85,6 +85,25 @@
 <img src=./image/36/2.png/ width=50%>
 </div>
 
+
+#### 中序如何轉換成前序或後序？記住兩個要點
+
+* 前序就是將運算元移動貼到左括號。例如(A+B) => (+AB)
+* 後序就是將運算元移動貼到右括號。例如(A+B) => (AB+)
+
+1. 將 A + B * (C + D) + E / F 轉為前序及後序
+
+<div align="left">
+<img src=./image/36/5.png/ width=50%>
+</div>
+
+
+2. 將 + + * A B / - C D – E F G 轉為中序及後序
+
+<div align="left">
+<img src=./image/36/6.png/ width=50%>
+</div>
+
 ---
 
 ## binary tree reconstruction
