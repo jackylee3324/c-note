@@ -121,3 +121,35 @@
 <div align="left">
 <img src=./image/36/3.png/ width=50%>
 </div>
+
+---
+
+## B樹
+
+B-tree 是一種樹狀的資料結構，他將資料存在節點中且樹中的節點是排序好的
+
+<div align="left">
+<img src=./image/36/7.png/ width=50%>
+</div>
+
+## B+樹
+
+B+tree 是另一種用來儲存資料的結構，他幾乎跟 B-tree 一樣，唯一的不同是 B+tree 將資料儲存在葉節點 (e.g 沒有子節點的節點)，也就是說在 B+tree 中，所有非葉節點中的值都是從葉節點中複製的，
+
+<div align="left">
+<img src=./image/36/8.png/ width=50%>
+</div>
+
+## AVL TREE 高度平衡二元搜尋樹
+
+AVL 樹透過頻繁旋轉來使樹達到平衡，使這棵樹可以擁有最小的搜尋成本。
+
+AVL樹的加入與平衡
+
+基本上，AVL樹的加入先以BST(二元搜尋樹)的方式加入，加入之後，重新計算BF(平衡因子)，當大於2時，則需要進行旋轉，共有四種旋轉方式：LL、RR、LR、RL。
+
+<div align="left">
+<img src=./image/36/9.png/ width=50%>
+</div>
+
+---
