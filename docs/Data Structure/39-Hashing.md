@@ -14,9 +14,22 @@ Hash table中文叫作雜湊表，又被稱為關聯式陣列，
 是根據key來查詢資料存在哪個記憶體位置的資料結構，而這個key是透過hash function(雜湊函數)計算出來的，搜尋速度為O(1)。
 
 
+## Hash Function 雜湊函數
+
 ## Collision (碰撞)
 
 不同的 Data，例如 (x,y)，經過 Hashing function 計算後得出相同的 Hashing Address 稱之，也就是 H (x) = H (y)。
+
+## Hash Table 發生Collision
+
+1. Separate Chaining (鏈接法)
+
+2. Open Address Hashing (開放地址法)
+    1. Linear Probing
+    2. Quadratic Probing 
+
+---
+
 
 ## Overflow (溢位)
 
@@ -37,3 +50,21 @@ Collision Resolution & Performance AnalysisQuestion: Suppose we have a Hash Tabl
 1. Show the final Hash Table if we use Linear Probing.
 2. If we use Quadratic Probing with the probe function $f(i) = i^2$ (i.e., $h(k, i) = (h(k) + i^2) \pmod{11}$), what is the index of key $23$?
 3. Calculate the Average Number of Probes for a successful search using the result from Linear Probing (Question 1).
+
+
+## 範例考題：
+Consider a hash table of size M=7 using separate chaining. The hash function is:
+h(k)=k mod 7
+
+Keys to insert (in order): 
+{10,21,32,43,54,65}
+
+Tasks:
+
+a) Draw the final hash table after inserting all keys using separate chaining. Represent chains as linked lists at each index.
+
+b) For key 43, how many nodes must be traversed to find it?
+
+c) Discuss average search cost for successful and unsuccessful searches in separate chaining, assuming uniform hashing.
+
+d) Compare open addressing vs separate chaining in terms of memory usage and clustering effects.
