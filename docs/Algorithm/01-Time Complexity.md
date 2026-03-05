@@ -1,6 +1,16 @@
 # Time & Space Complexity(時間複雜度與空間複雜度)
 
 
+## 演算法
+
+需滿足下列5個性質：
+1. Input: 外界至少提供≥0個輸入
+2. Output: Algorithm至少產生≥1個輸出結果
+3. Definiteness (明確): 每個指令必須是Clear and Unambiguous
+4. Finiteness (有限性): Algorithm在執行有限個步驟後，必定終止
+5. Effectiveness (有效性): 用紙跟筆即可追蹤Algorithm中執行的過程及結果
+
+
 ## 時間複雜度 Time Complexity
 
 時間複雜度，意思是，電腦執行這個演算法時，需要耗費多少「運算次數」來做計算
