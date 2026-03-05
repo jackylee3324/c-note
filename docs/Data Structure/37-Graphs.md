@@ -55,9 +55,6 @@ BFS：追求「廣」，用於尋找最短路徑，耗費記憶體較多（Queue
 
 
 
-
-
-
 ---
 
 ## Minmim cost panning trees 最小成本生成樹
@@ -115,9 +112,5 @@ BFS：追求「廣」，用於尋找最短路徑，耗費記憶體較多（Queue
 ## AOV 網絡 (Activity On Vertex Network)
 
 * 定義：用頂點表示活動，邊表示活動間的優先順序（ u -> v，表示 u 完成後才能做 v ）。
-* 應用：專案管理、課程先修順序。
-* 重要指標：
-    1. TE (Earliest Time)：源頭到節點的最長路徑。
-    2. TL (Latest Time)：最後點倒推回來的最短路徑。
-    3. 關鍵路徑：TE=TL 的頂點連線，決定專案總時長。 
-
+* AOV Network 必須是有向無環圖 Directed Acyclic Graph (DAG)，
+* 如果一個有向圖從任意頂點出發無法經過若干條邊回到該點，則這個圖是一個有向無環圖（英語：Directed Acyclic Graph，縮寫：DAG）
