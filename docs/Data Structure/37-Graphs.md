@@ -13,9 +13,9 @@
 
 ## 常見用來儲存 Graph 的方式有兩種：
 
-Adjacency Matrix
+Adjacency(相鄰) Matrix
 
-Adjacency List
+Adjacency(相鄰) List
 
 <div align="left">
 <img src=./image/37/2.png/ width=50%>
@@ -23,7 +23,11 @@ Adjacency List
 
 ## 圖的遍歷 (Graph Traversal)
 
-* 深度優先搜尋 Depth-first Search
+#### 深度優先搜尋 Depth-first Search (DFS)
+
+DFS：追求「深」，通常用於查找特定路徑或遍歷所有可能，耗費記憶體較少（Stack）
+
+採用遞迴 DFS，鄰接節點依數字小→大順序
 
 ```
 時間複雜度分析
@@ -33,7 +37,11 @@ Adjacency List
  則需走訪(n^2^)格個儲存格，故時間複雜度為O(n^2^)
 ```
 
-* 廣度優先搜尋 Breadth-first Search
+#### 廣度優先搜尋 Breadth-first Search (BFS)
+
+BFS：追求「廣」，用於尋找最短路徑，耗費記憶體較多（Queue）
+
+鄰接節點按數字小→大順序訪問
 
 ```
 時間複雜度分析
@@ -43,6 +51,14 @@ Adjacency List
 (2)若使用adjacency matrix:
 則需走訪所有儲存空間(n^2^)，故時間複雜度為O(n^2^)
 ```
+
+
+
+
+
+
+
+---
 
 ## Minmim cost panning trees 最小成本生成樹
 
@@ -58,7 +74,17 @@ Adjacency List
 
 * Dijkstra's algo
 
+權值須為正數
+
+<div align="left">
+<img src=./image/37/3.png/ width=50%>
+</div>
+
 * Bellmen's algo
+
+使用在權值可能為負數
+
+
 
 #### 所有點至其他點的距離(All Pairs Shortest Paths)
 
@@ -77,6 +103,10 @@ Adjacency List
 * Kahn's 演算法 (入度法/BFS)
 
 時間複雜度：O(V+E)
+
+<div align="left">
+<img src=./image/37/4.png/ width=50%>
+</div>
 
 * DFS 深度優先搜尋法
 
