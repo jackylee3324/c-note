@@ -20,14 +20,6 @@ Hash table中文叫作雜湊表，又被稱為關聯式陣列，
 
 不同的 Data，例如 (x,y)，經過 Hashing function 計算後得出相同的 Hashing Address 稱之，也就是 H (x) = H (y)。
 
-## Hash Table 發生Collision
-
-1. Separate Chaining (鏈接法)
-
-2. Open Address Hashing (開放地址法)
-    1. Linear Probing
-    2. Quadratic Probing 
-
 ---
 
 
@@ -37,16 +29,20 @@ Hash table中文叫作雜湊表，又被稱為關聯式陣列，
 
 ## Overflow 處理方法
 
-1. Linear Probing (線性探測)
-    * 當 H (x) 發生 overflow 的時候，則探測 (H (x)+i)% B，B 為 Bucket 數，i = 1,2,3,…,B-1，直到有 Bucket 可存 or Table 全滿為止
+1. Open Address Hashing (開放地址法)
+    1. Linear Probing (線性探測)
+        * 當 H (x) 發生 overflow 的時候，則探測 (H (x)+i)% B，B 為 Bucket 數，i = 1,2,3,…,B-1，直到有 Bucket 可存 or Table 全滿為止
 
-2. Quadratic Probing (二次方探測)
-    * 
-    * 雖然二次探測解決了「一大坨數據擠在一起」的 Primary Clustering，但它引發了 Secondary Clustering (次要聚集)：
-    
-3. Rehashing (再雜湊)
+    2. Quadratic Probing (二次方探測)
+        * 
+        * 雖然二次探測解決了「一大坨數據擠在一起」的 Primary Clustering，但它引發了 Secondary Clustering (次要聚集)：
+        
+    3. Rehashing (再雜湊)
 
-4. Link List (鏈結串列，或稱Chain)
+2. Chaining
+    1. Link List (鏈結串列，或稱Chain)
+
+---
 
 ## 範例考題：
 Collision Resolution & Performance AnalysisQuestion: Suppose we have a Hash Table of size $M = 11$ (indices $0$ to $10$). The hash function is $h(k) = k \pmod{11}$. We insert the following keys in order:$\{25, 36, 14, 47, 5, 23\}$
