@@ -1,24 +1,25 @@
 #include <iostream>
 #include <cstdio>
 
+// UVA572
+// 區分幾個油田
+
 char map[105][105];  // 紀錄輸入數據
 char used[105][105]; // 紀錄遍歷
-int ans[105];        // 紀錄多筆答案數據
-int ansCount;
 
+// dfs
 void dfs(int x, int y)
 {
     if (x < 0 || y < 0 || map[x][y] == 0)
         return;
-    if (used[x][y] != 0 || map[x][y] != 'W')
+    if (used[x][y] != 0 || map[x][y] != '@')
         return;
-    used[x][y] = 1;
-    ans[ansCount]++;
-    int i, j;
+
+    used[x][y] = 1; // 標記讀取過
 
     // 擴散4週數據找尋
-    for (i = -1; i <= 1; i++)
-        for (j = -1; j <= 1; j++)
+    for (int i = -1; i <= 1; i++)
+        for (int j = -1; j <= 1; j++)
             dfs(x + i, y + j);
 }
 
@@ -35,13 +36,6 @@ int main()
         }
     }
 
-    for (int i = 0; i < 105; i++)
-    {
-        ans[i] = 0;
-    }
-
-    ansCount = 0;
-
     std::string str;
     int n = 0;
     while (std::getline(std::cin, str))
@@ -49,7 +43,7 @@ int main()
         if (str[0] == '\0')
             break;
 
-        if (str[0] == 'W' || str[0] == 'L')
+        if (str[0] == '@' || str[0] == '*')
         {
             sscanf(str.c_str(), "%s", map[n]);
             n++;
@@ -65,23 +59,30 @@ int main()
                     used[i][j] = 0;
                 }
             }
-
-            
-            // ans = 0;
-            dfs(x - 1, y - 1);   //對應陣列位置，需要減一
-
-            ansCount = ansCount + 1;
         }
     }
 
+    int count = 0;
 
-    //printf("AAA-%d\n", ansCount);
+    // 跑陣列所有資料，標記
+    for (int i = 0; i < x; i++)
+    {
+        for (int j = 0; j < y; j++)
+        {
+            if (map[i][j] == '@' && !used[i][j])
+            {
+                dfs(i, j);
+                count++;
+            }
+        }
+    }
+    printf("%d\n", count);
 
     // 測試輸出
-    for (int i = 0; i < ansCount; i++)
-    {
-        printf("%d\n", ans[i]);
-    }
+    // for (int i = 0; i < x; i++)
+    // {
+    //     printf("%s\n", map[i]);
+    // }
 
     return 0;
 }
