@@ -1,8 +1,18 @@
 # CPE 常用指令
 
 
-* 輸入格式：2 5 6
+* 單個輸入
+```c++
+int main() {
+    int n;
+    std::cin >> n;
+
+    return 0;
+}
 ```
+
+* 輸入格式：2 5 6
+```c++
 #include <iostream>
 #include <cstdio>
 
@@ -21,7 +31,7 @@ int main()
 ```
 
 * 讀取整行字串並解析多個整數
-```
+```c++
 #include <iostream>
 #include <string>
 #include <cstdio>
@@ -40,7 +50,7 @@ int main() {
 ```
 
 * 讀取整行字串並解析字串
-```
+```c++
 #include <iostream>
 #include <string>
 #include <cstdio>
@@ -53,6 +63,19 @@ int main() {
     sscanf(str.c_str(), "%s", buf);
 
     std::cout << buf << std::endl;
+    return 0;
+}
+
+```
+
+
+* 持續接收輸入，遇到輸入0跳出
+```c++
+int main() {
+    int n;
+    while (cin >> n && n) {
+        
+    }
     return 0;
 }
 
