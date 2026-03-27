@@ -3,16 +3,20 @@
 
 * 單個輸入
 ```c++
+
 int main() {
     int n;
     std::cin >> n;
 
     return 0;
 }
+
 ```
 
 * 輸入格式：2 5 6
+
 ```c++
+
 #include <iostream>
 #include <cstdio>
 
